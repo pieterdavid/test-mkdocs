@@ -1,3 +1,8 @@
+language: python
+install:
+- pip install mkdocs
+script:
+- mkdocs build --verbose --clean --strict
 deploy:
   provider: pages
   local-dir: site
