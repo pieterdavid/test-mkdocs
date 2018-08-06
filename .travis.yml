@@ -1,5 +1,6 @@
 deploy:
   provider: pages
+  local-dir: site
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
   keep-history: true
