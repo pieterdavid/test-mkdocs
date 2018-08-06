@@ -1,0 +1,52 @@
+site_name: 'Test mkdocs site'
+site_description: 'Testing mkdocs for cp3-llbb'
+site_author: 'Pieter David'
+site_url: 'https://pieterdavid.github.io/test-mkdocs/'
+repo_name: 'pieterdavid/test-mkdocs'
+repo_url: 'https://github.com/pieterdavid/test-mkdocs'
+copyright: 'Copyright &copy; 2018 Pieter David'
+
+nav:
+  - Overview: index.md
+  - Framework:
+    - Overview: framework.md
+    - Jenkins CI: fwk_jenkins.md
+    - Doxygen: doxyfwk/index.html
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+
+plugins:
+  - doxygen:
+      tryclone: true
+      packages:
+        - doxyfwk:
+            url    : https://github.com/cp3-llbb/Framework.git
+            config : docs/doxygen.cfg
+
+# Theming
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/pieterdavid'
+
+# Google Analytics
+# google_analytics:
+#   - 'UA-XXXXXXXX-X'
+#   - 'auto'
+
